@@ -1,0 +1,17 @@
+{
+  "name": "xyz",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+        "api-test-production":  "newman run test/vishal1.postman_collection.json --reporters cli,junit --reporter-junit-export newman.xml"
+
+  },
+  "author": "vishal",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^3.9.3"
+  }
+}

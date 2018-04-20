@@ -1,0 +1,109 @@
+{
+	"variables": [],
+	"info": {
+		"name": "postmandemo",
+		"_postman_id": "5027533a-60c6-c6be-8914-faffbb8a0634",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts?userId=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts?userId=1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "pre script:-\nqw\nasdas\nasd\n\ntest script: ---\ndfsdfs\ndsfsdfsd"
+			},
+			"response": []
+		},
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "hfhf\n\ndfhgf\n\n\n\n\nhfghgf"
+			},
+			"response": []
+		},
+		{
+			"name": "http://kzone.me/api/v1/placement",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://kzone.me/api/v1/placement",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 8fd7efedb7245c7b290b3a14b87f72116c17be32"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"lat\":\"28.48123\",\r\n                \"state_id\":\"0\",\r\n                \"language\":\"11\",\r\n                \"long\":\"77.1004222\"\r\n            }\r\n"
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
